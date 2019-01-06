@@ -48,6 +48,13 @@ shrd_srv_rdis_pvt_stat_addr = "172.21.35.179"
 
 shrd_srv_rdis_fwall_rl = "allowabsitdsdevvnet"
 
+shrd_srv_rdis_nsg = "itds-dev-wus-shed-srv-rdis-nsg"
+
+shrd_srv_rdis_snet_addr_pfx = "172.21.35.176/29"
+
+shrd_srv_rdis_snet = "itds-dev-wus-shed-srv-rdis-snet"
+
+
 #VNet start ip
 shrd_srv_rdis_fwall_rl_start_ip = "172.21.32.0"
 #VNet end ip
