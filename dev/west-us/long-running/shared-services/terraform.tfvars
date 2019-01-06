@@ -28,11 +28,8 @@ terragrunt = {
 #                          Terraform Module Variables                          #
 ################################################################################
 
-
-
-
-
-
+shrd_srv_rdis_rg = "itds-dev-wus-shed-srv-rdis-rg"
+shrd_srv_mysql_rg = "itds-dev-wus-shed-srv-mysql-rg"
 
 ################################################################################
 #                                     End                                      #
