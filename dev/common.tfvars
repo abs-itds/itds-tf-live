@@ -9,13 +9,17 @@ vnet_address_space = "172.21.32.0/22"
 
 
 
-subs_lk_name = "itds-dev-wus-subs-lk"
-subs_tag_plcy_asgn_env_nm = "itds-dev-wus-subs-tag-plcy-asgn-env"
-subs_tag_plcy_asgn_grp_nm = "itds-dev-wus-subs-tag-plcy-asgn-grp"
-subs_tag_plcy_asgn_admins_nm = "itds-dev-wus-subs-tag-plcy-asgn-adms"
-subs_tag_plcy_asgn_allwd_loc_nm = "itds-dev-wus-subs-tag-plcy-allwd-loc"
-subs_rg_nm = "itds-dev-wus-rg"
+subs_lk = "itds-dev-wus-subs-lk"
+subs_env_tag = "itds-dev-wus-subs-env-tag"
+subs_grp_tag = "itds-dev-wus-subs-grp-tag"
+subs_adms_tag = "itds-dev-wus-subs-adms-tag"
+subs_allwd_loc_tag = "itds-dev-wus-subs-allwd-loc-tag"
+subs_rg = "itds-dev-wus-rg"
 
+
+itds_shrd_srv_rdis_rg = "itds-dev-wus-shed-srv-rdis-rg"
+
+itds_shrd_srv_mysql_rg = "itds-dev-wus-shed-srv-mysql-rg"
 
 /******
 Terraform
