@@ -2,15 +2,20 @@ env_name = "Dev"
 env_location = "West US"
 env_group = "ITDS"
 env_admins = "dadam47,ashin14"
-env_prefix = "itds-dev-wus"
-client_secret = "wXMImh/t43LBNJYpTLq5HZB1zMBBQzNHPTgm2Bu8HDo="
-subscription_id = "f0a049d7-bb54-4698-89a3-04b140a152c0"
 subscription_name = "abs-itds-dev"
-client_id = "3d15beb5-6008-4541-b75b-9a2d893d1875"
-tenant_id = "b7f604a0-00a9-4188-9248-42f3a5aac2e9"
 vnet_name = "Abs-ITDS-Dev"
 vnet_rg_name = "Abs-ITDS-Dev"
 vnet_address_space = "172.21.32.0/22"
+
+
+
+subs_lk_name = "itds-dev-wus-subs-lk"
+subs_tag_plcy_asgn_env_nm = "itds-dev-wus-subs-tag-plcy-asgn-env"
+subs_tag_plcy_asgn_grp_nm = "itds-dev-wus-subs-tag-plcy-asgn-grp"
+subs_tag_plcy_asgn_admins_nm = "itds-dev-wus-subs-tag-plcy-asgn-adms"
+subs_tag_plcy_asgn_allwd_loc_nm = "itds-dev-wus-subs-tag-plcy-allwd-loc"
+subs_rg_nm = "itds-dev-wus-rg"
+
 
 /******
 Terraform
