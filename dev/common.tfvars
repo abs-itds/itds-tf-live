@@ -7,25 +7,5 @@ subscription_name = "abs-itds-dev"
 vnet_name = "Abs-ITDS-Dev"
 vnet_rg_name = "Abs-ITDS-Dev"
 vnet_address_space = "172.21.32.0/22"
-
-
-
-
-
-
-
-
-variable "vnet_name" {
-  default = ""
-}
-variable "vnet_rg_name" {
-  default = ""
-}
-
-variable "shrd_srv_rdis_snet_addr_pfx" {
-  default = ""
-}
-variable "shrd_srv_rdis_snet" {
-  default = ""
-}
-
+vnet_start_ip = "172.21.32.0"
+vnet_end_ip = "172.21.35.255"
