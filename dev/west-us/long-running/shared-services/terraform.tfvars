@@ -46,7 +46,7 @@ shrd_srv_rdis_rg = "itds-dev-wus-shed-srv-rdis-rd"
 
 shrd_srv_rdis_pvt_stat_addr = "172.21.35.179"
 
-shrd_srv_rdis_fwall_rl = "itds-dev-wus-shed-srv-rdis-fwall-rl"
+shrd_srv_rdis_fwall_rl = "allow_abs_itds_dev_vnet"
 
 #VNet start ip
 shrd_srv_rdis_fwall_rl_start_ip = "172.21.32.0"
@@ -57,7 +57,7 @@ shrd_srv_msql_rg = "itds-dev-wus-shed-srv-msql-rg"
 
 shrd_srv_msql = "itds-dev-wus-shed-srv-msql"
 
-shrd_srv_msql_fwall_rl = "itds-dev-wus-shed-srv-msql-fwall-rl"
+shrd_srv_msql_fwall_rl = "allow_abs_itds_dev_vnet"
 
 shrd_srv_msql_adm_usr = "itdsdevwusadmin"
 
