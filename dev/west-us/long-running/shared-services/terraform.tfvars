@@ -15,7 +15,8 @@ terragrunt = {
   # parameter, along with any files in the working directory, into a temporary
   # folder, and execute Terraform commands in that folder.
   terraform {
-    source = "git::git@github.com:abs-itds/itds-tf-modules.git//long-running/shared-services?ref=master"
+    #source = "git::git@github.com:abs-itds/itds-tf-modules.git//long-running/shared-services?ref=master"
+    source = "/Users/Shingate/Documents/Albertson/BitBucket/itds/itds-tf/itds-tf-modules/long-running/shared-services"
   }
 
   # Include all settings from the root terraform.tfvars file
@@ -46,14 +47,7 @@ shrd_srv_rdis_rg = "itds-dev-wus-shed-srv-rdis-rd"
 
 shrd_srv_rdis_pvt_stat_addr = "172.21.35.179"
 
-shrd_srv_rdis_fwall_rl = "allowabsitdsdevvnet"
-
-shrd_srv_rdis_nsg = "itds-dev-wus-shed-srv-rdis-nsg"
-
-shrd_srv_rdis_snet_addr_pfx = "172.21.35.176/29"
-
-shrd_srv_rdis_snet = "itds-dev-wus-shed-srv-rdis-snet"
-
+shrd_srv_rdis_fwall_rl = "Allow Entire Abs-ITDS-Dev VNet IP Range"
 
 #VNet start ip
 shrd_srv_rdis_fwall_rl_start_ip = "172.21.32.0"
@@ -64,7 +58,7 @@ shrd_srv_msql_rg = "itds-dev-wus-shed-srv-msql-rg"
 
 shrd_srv_msql = "itds-dev-wus-shed-srv-msql"
 
-shrd_srv_msql_fwall_rl = "allowabsitdsdevvnet"
+shrd_srv_msql_fwall_rl = "Allow Entire Abs-ITDS-Dev VNet IP Range"
 
 shrd_srv_msql_adm_usr = "itdsdevwusadmin"
 
