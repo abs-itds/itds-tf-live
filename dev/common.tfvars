@@ -19,14 +19,8 @@ End IP: 172.21.32.7
 Addresses: 8
 Netmask: 255.255.255.248
 */
-tf_rg_name = "itds-dev-wus-tf-rg"
-tf_snet_name = "itds-dev-wus-tf-snet"
-tf_snet_address_prefix = "172.21.32.0/29"
-tf_sa_name = "itdsdevwustfsa"
-tf_sa_sc_name = "itds-dev-wus-tf-state"
-
-
-usrv_rg_name = "itds-dev-wus-usrv-rg"
-usrv_nsg_name = "itds-dev-wus-usrv-nsg"
-usrv_snet_name = "itds-dev-wus-usrv-snet"
-usrv_snet_address_prefix = "172.21.35.224/28"
+rg_name = "itds-dev-wus-tf-rg"
+snet_name = "itds-dev-wus-tf-snet"
+snet_address_prefix = "172.21.32.0/29"
+sa_name = "itdsdevwustfsa"
+sa_sc_name = "itds-dev-wus-tf-state"
