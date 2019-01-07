@@ -15,7 +15,6 @@ shsrv_sa = "absitdsdevwus002"
 env_prefix_hypon = "itds-dev-wus"
 env_prefix_underscore = "itds_dev_wus"
 
-
 #Subnets
 #Terraform
 tf_snet_address_prefix = "172.21.32.0/29"
