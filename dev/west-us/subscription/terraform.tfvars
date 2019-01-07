@@ -33,7 +33,7 @@ subs_env_tag = "itds-dev-wus-subs-env-tag"
 subs_grp_tag = "itds-dev-wus-subs-grp-tag"
 subs_adms_tag = "itds-dev-wus-subs-adms-tag"
 subs_allwd_loc_tag = "itds-dev-wus-subs-allwd-loc-tag"
-subs_rg = "itds-dev-wus-rg"
+
 
 ################################################################################
 #                                     End                                      #
