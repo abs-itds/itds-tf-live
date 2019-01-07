@@ -15,8 +15,7 @@ terragrunt = {
   # parameter, along with any files in the working directory, into a temporary
   # folder, and execute Terraform commands in that folder.
   terraform {
-    #source = "git::git@github.com:abs-itds/itds-tf-modules.git//long-running/shared-services?ref=master"
-    source = "/Users/Shingate/Documents/Albertson/BitBucket/itds/itds-tf/itds-tf-modules/long-running/shared-services/sftp"
+    source = "git::git@github.com:abs-itds/itds-tf-modules.git//hdinsight/kafka?ref=1.0.0"
   }
 
   # Include all settings from the root terraform.tfvars file
@@ -29,13 +28,11 @@ terragrunt = {
 #                          Terraform Module Variables                          #
 ################################################################################
 
-shrd_srv_sftp_nd_adm = "itdsdevwusadmin"
-shrd_srv_sftp_nd_pswd = "tdsd_vwu-admin53-243"
-shrd_srv_sftp_snet_addr_pfx = "172.21.35.240/29"
 
-shrd_srv_sftp_nd_01_stat_ip_addr = "172.21.35.244"
-shrd_srv_sftp_nd_02_stat_ip_addr = "172.21.35.245"
-shrd_srv_sftp_nd_03_stat_ip_addr = "172.21.35.246"
+
+
+
+
 
 ################################################################################
 #                                     End                                      #

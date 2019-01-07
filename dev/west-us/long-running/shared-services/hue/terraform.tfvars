@@ -31,11 +31,6 @@ terragrunt = {
 
 shrd_srv_hue_nd_adm = "itdsdevwusadmin"
 shrd_srv_hue_nd_pswd = "tdsd_vwu-admin53-243"
-shrd_srv_hue_snet_addr_pfx = "172.21.35.176/29"
-
-shrd_srv_hue_nd_01_stat_ip_addr = "172.21.35.180"
-shrd_srv_hue_nd_02_stat_ip_addr = "172.21.35.181"
-shrd_srv_hue_nd_03_stat_ip_addr = "172.21.35.182"
 
 ################################################################################
 #                                     End                                      #

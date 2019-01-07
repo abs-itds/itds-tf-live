@@ -15,7 +15,8 @@ terragrunt = {
   # parameter, along with any files in the working directory, into a temporary
   # folder, and execute Terraform commands in that folder.
   terraform {
-    source = "git::git@github.com:abs-itds/itds-tf-modules.git//user-services?ref=1.0.0"
+    #source = "git::git@github.com:abs-itds/itds-tf-modules.git//long-running/shared-services?ref=master"
+    source = "/Users/Shingate/Documents/Albertson/BitBucket/itds/itds-tf/itds-tf-modules/long-running/shared-services/sftp/external"
   }
 
   # Include all settings from the root terraform.tfvars file
@@ -28,11 +29,8 @@ terragrunt = {
 #                          Terraform Module Variables                          #
 ################################################################################
 
-
-
-
-
-
+shrd_srv_xsftp_nd_adm = "itdsdevwusadmin"
+shrd_srv_xsftp_nd_pswd = "tdsd_vwu-admin53-243"
 
 ################################################################################
 #                                     End                                      #

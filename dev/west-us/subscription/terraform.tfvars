@@ -28,12 +28,6 @@ terragrunt = {
 #                          Terraform Module Variables                          #
 ################################################################################
 
-subs_lk = "itds-dev-wus-subs-lk"
-subs_env_tag = "itds-dev-wus-subs-env-tag"
-subs_grp_tag = "itds-dev-wus-subs-grp-tag"
-subs_adms_tag = "itds-dev-wus-subs-adms-tag"
-subs_allwd_loc_tag = "itds-dev-wus-subs-allwd-loc-tag"
-
 
 ################################################################################
 #                                     End                                      #
