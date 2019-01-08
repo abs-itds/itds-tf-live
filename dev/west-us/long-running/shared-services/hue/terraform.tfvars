@@ -31,6 +31,7 @@ terragrunt = {
 
 shrd_srv_hue_nd_adm = "itdsdevwusadmin"
 shrd_srv_hue_nd_pswd = "tdsd_vwu-admin53-243"
+shrd-srv-hue-nd-vm-sz = "Standard_D4s_v3"
 
 ################################################################################
 #                                     End                                      #
