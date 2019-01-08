@@ -34,7 +34,7 @@ shsrv_srv_msql_fwall_rl = "AllowEntireAbsITDSDevVNetIPRange"
 
 shsrv_srv_msql_adm_usr = "itdsdevwusadmin"
 
-shsrv_srv_msql_adm_pswd = "tdsd_vwu-admin53-243"
+shsrv_srv_msql_adm_pswd = "ztrdsed_vwE_53_243"
 
 ################################################################################
 #                                     End                                      #

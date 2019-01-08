@@ -30,7 +30,7 @@ terragrunt = {
 ################################################################################
 
 shrd_srv_isftp_nd_adm = "itdsdevwusadmin"
-shrd_srv_isftp_nd_pswd = "tdsd_vwu-admin53-243"
+shrd_srv_isftp_nd_pswd = "ztrdsed_vwE_53_243"
 shrd-srv-isftp-nd-vm-sz = "Standard_D4s_v3"
 
 ################################################################################
