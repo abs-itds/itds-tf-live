@@ -15,16 +15,31 @@ shsrv_sa = "absitdsdopswus001"
 env_prefix_hypon = "itds-dops-wus"
 env_prefix_underscore = "itds_dops_wus"
 
-#Range : 172.21.40.0 - 172.21.40.15
-#Count : 14
-shrd_srv_artif_snet_addr_pfx = "172.21.40.0/28"
-shrd_srv_artif_nd_01_stat_ip_addr = "172.21.40.4"
-shrd_srv_artif_nd_02_stat_ip_addr = "172.21.40.5"
-shrd_srv_artif_nd_03_stat_ip_addr = "172.21.40.6"
+#Subnets
+#Terraform
+tf_snet_address_prefix = "172.21.40.0/29"
 
-#Range : 172.21.40.16 - 172.21.40.31
-#Count : 14
-shrd_srv_jnkns_snet_addr_pfx = "172.21.40.16/28"
-shrd_srv_jnkns_nd_01_stat_ip_addr = "172.21.40.20"
-shrd_srv_jnkns_nd_02_stat_ip_addr = "172.21.40.21"
-shrd_srv_jnkns_nd_03_stat_ip_addr = "172.21.40.22"
+prob_snet_addr_pfx = "172.21.40.8/29"
+prob_nd_01_stat_ip_addr = "172.21.40.12"
+
+shrd_srv_arflw_snet_addr_pfx = "172.21.40.16/28"
+shrd_srv_arflw_nd_01_stat_ip_addr = "172.21.40.20"
+shrd_srv_arflw_nd_02_stat_ip_addr = "172.21.40.21"
+shrd_srv_arflw_nd_03_stat_ip_addr = "172.21.40.22"
+
+shrd_srv_hue_snet_addr_pfx = "172.21.40.32/28"
+shrd_srv_hue_nd_01_stat_ip_addr = "172.21.40.36"
+shrd_srv_hue_nd_02_stat_ip_addr = "172.21.40.37"
+shrd_srv_hue_nd_03_stat_ip_addr = "172.21.40.38"
+
+shrd_srv_xsftp_snet_addr_pfx = "172.21.40.48/28"
+shrd_srv_xsftp_nd_01_stat_ip_addr = "172.21.40.52"
+shrd_srv_xsftp_nd_02_stat_ip_addr = "172.21.40.53"
+shrd_srv_xsftp_nd_03_stat_ip_addr = "172.21.40.54"
+
+shrd_srv_isftp_snet_addr_pfx = "172.21.40.64/28"
+shrd_srv_isftp_nd_01_stat_ip_addr = "172.21.40.68"
+shrd_srv_isftp_nd_02_stat_ip_addr = "172.21.40.69"
+shrd_srv_isftp_nd_03_stat_ip_addr = "172.21.40.70"
+
+hdi_kfka_snet_addr_pfx = "172.21.40.80/28"

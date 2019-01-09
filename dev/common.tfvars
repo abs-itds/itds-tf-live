@@ -19,6 +19,9 @@ env_prefix_underscore = "itds_dev_wus"
 #Terraform
 tf_snet_address_prefix = "172.21.32.0/29"
 
+prob_snet_addr_pfx = "172.21.32.8/29"
+prob_nd_01_stat_ip_addr = "172.21.32.12"
+
 shrd_srv_arflw_snet_addr_pfx = "172.21.32.16/28"
 shrd_srv_arflw_nd_01_stat_ip_addr = "172.21.32.20"
 shrd_srv_arflw_nd_02_stat_ip_addr = "172.21.32.21"
