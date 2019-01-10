@@ -29,7 +29,7 @@ terragrunt = {
 #                          Terraform Module Variables                          #
 ################################################################################
 
-shrd_srv_jnkns_nd_adm = "itdsdevwusadmin"
+shrd_srv_jnkns_nd_adm = "itdsdopswusadmin"
 shrd_srv_jnkns_nd_pswd = "ztrdsed_vwE_53_243"
 
 ################################################################################

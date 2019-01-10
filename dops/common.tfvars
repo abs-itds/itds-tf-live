@@ -6,7 +6,7 @@ subscription_name = "abs-itds-dops"
 
 vnet_name = "Abs-ITDS-DevOps"
 vnet_rg_name = "Abs-ITDS-DevOps"
-vnet_address_space = "172.21.40.0/23"
+vnet_address_space = "172.21.40.96/27"
 vnet_start_ip = "172.21.40.0"
 vnet_end_ip = "172.21.41.255"
 
@@ -42,4 +42,6 @@ shrd_srv_isftp_nd_01_stat_ip_addr = "172.21.40.68"
 shrd_srv_isftp_nd_02_stat_ip_addr = "172.21.40.69"
 shrd_srv_isftp_nd_03_stat_ip_addr = "172.21.40.70"
 
-hdi_kfka_snet_addr_pfx = "172.21.40.80/28"
+//Missed 172.21.40.80/28
+
+hdi_kfka_snet_addr_pfx = "172.21.40.96/27"

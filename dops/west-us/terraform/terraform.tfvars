@@ -15,8 +15,7 @@ terragrunt = {
   # parameter, along with any files in the working directory, into a temporary
   # folder, and execute Terraform commands in that folder.
   terraform {
-    source = "git::git@github.com:abs-itds/itds-tf-modules.git//prob?ref=master"
-    #source = "/Users/Shingate/Documents/Albertson/BitBucket/itds/itds-tf/itds-tf-modules/prob"
+    source = "git::git@github.com:abs-itds/itds-tf-modules.git//terraform?ref=master"
   }
 
   # Include all settings from the root terraform.tfvars file
@@ -29,9 +28,15 @@ terragrunt = {
 #                          Terraform Module Variables                          #
 ################################################################################
 
-prob_nd_adm = "itdsprodwusadmin"
-prob_nd_pswd = "ztrdsed_vwE_53_243"
-prob_vm_sz = "Standard_D4s_v3"
+/******
+Terraform
+Start IP: 172.21.32.0
+End IP: 172.21.32.7
+Addresses: 8
+Netmask: 255.255.255.248
+*/
+tf_sa_name = "itdsdopswustfsa"
+tf_sa_sc_name = "itds-dops-wus-tf-state"
 
 ################################################################################
 #                                     End                                      #

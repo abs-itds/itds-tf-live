@@ -30,9 +30,31 @@ terragrunt = {
 ################################################################################
 
 
-shrd_srv_hdi_kfka_nd_adm_clst = "itdsdevwusadmin"
-shrd_srv_hdi_kfka_nd_pswd = "ztrdsed_vwE_53_243"
-shrd_srv_hdi_kfka_nd_adm_ssh = "itdsdevwusadminssh"
+hdi_clus_tir = "premium"
+
+hdi_kfka_edg_nd_sz = "Standard_D2"
+
+hdi_kfka_hd_nd_sz = "Standard_D4"
+
+hdi_kfka_htp_usr_pwd = "ztrdsed_vwE_53_243"
+
+hdi_kfka_htp_usr = "itdsdevwusadmin"
+
+hdi_kfka_wk_nd_cnt = "3"
+
+hdi_kfka_ssh_pub_ky = ""
+
+hdi_kfka_ssh_user = "itdsdevwusadminssh"
+
+hdi_version = "3.6"
+
+hdi_kfka_wrk_nd_dsk_sz = "1024"
+
+hdi_kfka_wrk_nd_dsks_cnt = "1"
+
+hdi_kfka_wrk_nd_sz = "Standard_D4"
+
+hdi_kfka_zk_nd_sz = "Standard_D2"
 
 ################################################################################
 #                                     End                                      #
