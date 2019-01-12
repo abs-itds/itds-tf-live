@@ -10,7 +10,7 @@ vnet_address_space = "172.21.32.0/22"
 vnet_start_ip = "172.21.32.0"
 vnet_end_ip = "172.21.35.255"
 
-shsrv_sa = "absitdsdevwus002"
+shsrv_sa = "absitdsdevwus001"
 
 env_prefix_hypon = "itds-dev-wus"
 env_prefix_underscore = "itds_dev_wus"
