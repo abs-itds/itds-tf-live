@@ -16,7 +16,7 @@ terragrunt = {
   # folder, and execute Terraform commands in that folder.
   terraform {
     #source = "git::git@github.com:abs-itds/itds-tf-modules.git//long-running/shared-services?ref=master"
-    source = "/Users/Shingate/Documents/Albertson/BitBucket/itds/itds-tf/itds-tf-modules/cicd-services/jenkins"
+    source = "/Users/Shingate/Documents/Albertson/BitBucket/itds/itds-tf/itds-tf-modules/long-running/cicd-services/jenkins"
   }
 
   # Include all settings from the root terraform.tfvars file
@@ -31,6 +31,7 @@ terragrunt = {
 
 shrd_srv_jnkns_nd_adm = "itdsdopswusadmin"
 shrd_srv_jnkns_nd_pswd = "ztrdsed_vwE_53_243"
+shrd_srv_jnkns_prj_git_url = "https://github.com/itds-teraform/jenkins2.git"
 
 ################################################################################
 #                                     End                                      #

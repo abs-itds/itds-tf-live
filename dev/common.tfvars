@@ -43,3 +43,8 @@ shrd_srv_isftp_nd_02_stat_ip_addr = "172.21.32.69"
 shrd_srv_isftp_nd_03_stat_ip_addr = "172.21.32.70"
 
 hdi_kfka_snet_addr_pfx = "172.21.32.96/27"
+
+shrd_srv_jnkns_snet_addr_pfx = "172.21.32.80/28"
+shrd_srv_jnkns_nd_01_stat_ip_addr = "172.21.32.84"
+shrd_srv_jnkns_nd_02_stat_ip_addr = "172.21.32.85"
+shrd_srv_jnkns_nd_03_stat_ip_addr = "172.21.32.86"
