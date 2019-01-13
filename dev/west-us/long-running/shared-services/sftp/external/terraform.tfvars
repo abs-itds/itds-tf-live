@@ -33,6 +33,11 @@ shrd_srv_xsftp_nd_adm = "itdsdevwusadmin"
 shrd_srv_xsftp_nd_pswd = "ztrdsed_vwE_53_243"
 shrd-srv-xsftp-nd-vm-sz = "Standard_D4s_v3"
 
+sftp_stge_in_usr = "itdsdevwussftpin"
+sftp_stge_out_usr = "ztrdsed_vwE_53_243"
+sftp_stge_in_usr_pwd = "itdsdevwussftpout"
+sftp_stge_out_usr_pwd = "ztrdsed_vwE_53_243"
+
 ################################################################################
 #                                     End                                      #
 ################################################################################

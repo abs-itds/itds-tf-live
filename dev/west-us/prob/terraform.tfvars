@@ -31,7 +31,12 @@ terragrunt = {
 
 prob_nd_adm = "itdsdevwusadmin"
 prob_nd_pswd = "ztrdsed_vwE_53_243"
-prob_vm_sz = "Standard_D4s_v3"
+prob_nd_vm_sz = "Standard_D4s_v3"
+
+sftp_stge_in_usr = "itdsdevwussftpin"
+sftp_stge_out_usr = "itdsdevwussftpout"
+sftp_stge_in_usr_pwd = "ztrdsed_vwE_53_243"
+sftp_stge_out_usr_pwd = "ztrdsed_vwE_53_243"
 
 ################################################################################
 #                                     End                                      #
