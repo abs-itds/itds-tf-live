@@ -15,7 +15,8 @@ terragrunt = {
   # parameter, along with any files in the working directory, into a temporary
   # folder, and execute Terraform commands in that folder.
   terraform {
-    source = "git::git@github.com:abs-itds/itds-tf-modules.git//subscription?ref=master"
+    #source = "git::git@github.com:abs-itds/itds-tf-modules.git//subscription?ref=master"
+    source = "/Users/Shingate/Documents/Albertson/BitBucket/itds/itds-tf/itds-tf-modules/subscription"
   }
 
   # Include all settings from the root terraform.tfvars file

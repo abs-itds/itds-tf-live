@@ -30,7 +30,7 @@ terragrunt = {
 ################################################################################
 
 
-hdi_clus_tir = "premium"
+hdi_clus_tir = "standard"
 
 hdi_kfka_edg_nd_sz = "Standard_D2"
 

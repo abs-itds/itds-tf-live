@@ -16,7 +16,7 @@ terragrunt = {
   # folder, and execute Terraform commands in that folder.
   terraform {
     #source = "git::git@github.com:abs-itds/itds-tf-modules.git//long-running/shared-services?ref=master"
-    source = "/Users/Shingate/Documents/Albertson/BitBucket/itds/itds-tf/itds-tf-modules/prob"
+    source = "/Users/Shingate/Documents/Albertson/BitBucket/itds/itds-tf/itds-tf-modules/long-running/prob"
   }
 
   # Include all settings from the root terraform.tfvars file
@@ -29,14 +29,64 @@ terragrunt = {
 #                          Terraform Module Variables                          #
 ################################################################################
 
-prob_nd_adm = "itdsdevwusadmin"
-prob_nd_pswd = "ztrdsed_vwE_53_243"
-prob_nd_vm_sz = "Standard_D4s_v3"
+prob_vm_adm = "itdsdopswusadmin"
 
-sftp_stge_in_usr = "itdsdevwussftpin"
-sftp_stge_out_usr = "itdsdevwussftpout"
-sftp_stge_in_usr_pwd = "ztrdsed_vwE_53_243"
-sftp_stge_out_usr_pwd = "ztrdsed_vwE_53_243"
+prob_vm_pswd = "ztrdsed_vwE_53_243"
+
+prob_nsg_ibnd_rl = [
+  "22",
+  "8081"
+]
+
+prob_nsg_ibnd_rl_src_pfx = [
+  "*",
+  "*"
+]
+
+prob_nsg_ibnd_rl_dst_pfx = [
+  "*",
+  "*"
+]
+
+prob_nsg_obnd_rl = [
+]
+
+prob_nsg_obnd_rl_src_pfx = [
+]
+
+prob_nsg_obnd_rl_dst_pfx = [
+]
+
+prob_lb_fnt_prt = [
+  "22",
+  "8081"
+]
+
+prob_lb_prb_prt = [
+  "22",
+  "8081"
+]
+
+prob_lb_bck_prt = [
+  "22",
+  "8081"
+]
+
+prob_vm_ip = [
+  "172.21.32.132",
+  "172.21.32.133",
+  "172.21.32.134"
+]
+
+prob_vm = {
+  vm_size = "Standard_F2"
+  vm_img_publisher = "Canonical"
+  vm_img_offer = "UbuntuServer"
+  vm_img_sku = "18.04-LTS"
+  vm_img_ver = "latest"
+  vm_mg_dsk_ty = "Standard_LRS"
+  vm_mg_dsk_sz = 1024
+}
 
 ################################################################################
 #                                     End                                      #

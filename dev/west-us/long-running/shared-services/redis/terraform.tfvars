@@ -29,7 +29,12 @@ terragrunt = {
 #                          Terraform Module Variables                          #
 ################################################################################
 
-shsrv_srv_rdis_fwall_rl = "AllowEntireAbsITDSDevVNetIPRange"
+shrd_srv_rdis = {
+  rdis_cpcty = 3
+  rdis_fmly = "C"
+  rdis_sku = "Basic"
+  rdis_mem_plcy = "volatile-lru"
+}
 
 ################################################################################
 #                                     End                                      #
