@@ -16,7 +16,7 @@ terragrunt = {
   # folder, and execute Terraform commands in that folder.
   terraform {
     #source = "git::git@github.com:abs-itds/itds-tf-modules.git//long-running/shared-services?ref=master"
-    source = "/Users/Shingate/Documents/Albertson/BitBucket/itds/itds-tf/itds-tf-live/dev/west-us/long-running/shared-services/hue"
+    source = "/Users/Shingate/Documents/Albertson/BitBucket/itds/itds-tf/itds-tf-modules/long-running/shared-services/hue"
   }
 
   # Include all settings from the root terraform.tfvars file
@@ -35,7 +35,7 @@ shrd_srv_hue_vm_pswd = "ztrdsed_vwE_53_243"
 
 shrd_srv_hue_nsg_ibnd_rl = [
   "22",
-  "8081"
+  "8888"
 ]
 
 shrd_srv_hue_nsg_ibnd_rl_src_pfx = [
@@ -59,23 +59,21 @@ shrd_srv_hue_nsg_obnd_rl_dst_pfx = [
 
 shrd_srv_hue_lb_fnt_prt = [
   "22",
-  "8081"
+  "8888"
 ]
 
 shrd_srv_hue_lb_prb_prt = [
   "22",
-  "8081"
+  "8888"
 ]
 
 shrd_srv_hue_lb_bck_prt = [
   "22",
-  "8081"
+  "8888"
 ]
 
 shrd_srv_hue_vm_ip = [
-  "172.21.32.136",
-  "172.21.32.137",
-  "172.21.32.138"
+  "172.21.32.36"
 ]
 
 shrd_srv_hue_vm = {

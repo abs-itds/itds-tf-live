@@ -16,7 +16,7 @@ terragrunt = {
   # folder, and execute Terraform commands in that folder.
   terraform {
     #source = "git::git@github.com:abs-itds/itds-tf-modules.git//long-running/shared-services?ref=master"
-    source = "/Users/Shingate/Documents/Albertson/BitBucket/itds/itds-tf/itds-tf-live/dev/west-us/long-running/shared-services/airflow"
+    source = "/Users/Shingate/Documents/Albertson/BitBucket/itds/itds-tf/itds-tf-modules/long-running/shared-services/airflow"
   }
 
   # Include all settings from the root terraform.tfvars file
@@ -35,7 +35,7 @@ shrd_srv_arflw_vm_pswd = "ztrdsed_vwE_53_243"
 
 shrd_srv_arflw_nsg_ibnd_rl = [
   "22",
-  "8081"
+  "8080"
 ]
 
 shrd_srv_arflw_nsg_ibnd_rl_src_pfx = [
@@ -59,23 +59,22 @@ shrd_srv_arflw_nsg_obnd_rl_dst_pfx = [
 
 shrd_srv_arflw_lb_fnt_prt = [
   "22",
-  "8081"
+  "8080"
 ]
 
 shrd_srv_arflw_lb_prb_prt = [
   "22",
-  "8081"
+  "8080"
 ]
 
 shrd_srv_arflw_lb_bck_prt = [
   "22",
-  "8081"
+  "8080"
 ]
 
 shrd_srv_arflw_vm_ip = [
   "172.21.32.20",
-  "172.21.32.21",
-  "172.21.32.22"
+  "172.21.32.21"
 ]
 
 shrd_srv_arflw_vm = {

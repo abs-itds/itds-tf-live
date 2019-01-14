@@ -34,6 +34,8 @@ shrd_srv_jnkns_snet_addr_pfx = "172.21.32.80/28"
 
 hdi_kfka_snet_addr_pfx = "172.21.32.96/27"
 
+hdi_sprk_snet_addr_pfx = "172.21.32.192/26"
+
 shrd_srv_artif_snet_addr_pfx = "172.21.32.128/27"
 
 

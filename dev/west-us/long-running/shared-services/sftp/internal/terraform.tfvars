@@ -29,9 +29,56 @@ terragrunt = {
 #                          Terraform Module Variables                          #
 ################################################################################
 
-shrd_srv_isftp_nd_adm = "itdsdevwusadmin"
-shrd_srv_isftp_nd_pswd = "ztrdsed_vwE_53_243"
-shrd-srv-isftp-nd-vm-sz = "Standard_D4s_v3"
+shrd_srv_isftp_vm_adm = "itdsdopswusadmin"
+
+shrd_srv_isftp_vm_pswd = "ztrdsed_vwE_53_243"
+
+shrd_srv_isftp_nsg_ibnd_rl = [
+  "22"
+]
+
+shrd_srv_isftp_nsg_ibnd_rl_src_pfx = [
+  "*",
+]
+
+shrd_srv_isftp_nsg_ibnd_rl_dst_pfx = [
+  "*",
+]
+
+shrd_srv_isftp_nsg_obnd_rl = [
+]
+
+shrd_srv_isftp_nsg_obnd_rl_src_pfx = [
+]
+
+shrd_srv_isftp_nsg_obnd_rl_dst_pfx = [
+]
+
+shrd_srv_isftp_lb_fnt_prt = [
+  "22"
+]
+
+shrd_srv_isftp_lb_prb_prt = [
+  "22"
+]
+
+shrd_srv_isftp_lb_bck_prt = [
+  "22"
+]
+
+shrd_srv_isftp_vm_ip = [
+  "172.21.32.69"
+]
+
+shrd_srv_isftp_vm = {
+  vm_size = "Standard_F2"
+  vm_img_publisher = "Canonical"
+  vm_img_offer = "UbuntuServer"
+  vm_img_sku = "18.04-LTS"
+  vm_img_ver = "latest"
+  vm_mg_dsk_ty = "Standard_LRS"
+  vm_mg_dsk_sz = 1024
+}
 
 ################################################################################
 #                                     End                                      #

@@ -15,7 +15,7 @@ terragrunt = {
   # parameter, along with any files in the working directory, into a temporary
   # folder, and execute Terraform commands in that folder.
   terraform {
-    source = "git::git@github.com:abs-itds/itds-tf-modules.git//hdinsight/spark?ref=1.0.0"
+    source = "/Users/Shingate/Documents/Albertson/BitBucket/itds/itds-tf/itds-tf-modules/long-running/hdinsight/spark"
   }
 
   # Include all settings from the root terraform.tfvars file
@@ -29,7 +29,31 @@ terragrunt = {
 ################################################################################
 
 
+hdi_clus_tir = "standard"
 
+hdi_sprk_edg_nd_sz = "Standard_D2"
+
+hdi_sprk_hd_nd_sz = "Standard_D4"
+
+hdi_sprk_htp_usr_pwd = "ztrdsed_vwE_53_243"
+
+hdi_sprk_htp_usr = "itdsdevwusadmin"
+
+hdi_sprk_wk_nd_cnt = "3"
+
+hdi_sprk_ssh_pub_ky = ""
+
+hdi_sprk_ssh_user = "itdsdevwusadminssh"
+
+hdi_version = "3.6"
+
+hdi_sprk_wrk_nd_dsk_sz = "1024"
+
+hdi_sprk_wrk_nd_dsks_cnt = "1"
+
+hdi_sprk_wrk_nd_sz = "Standard_D4"
+
+hdi_sprk_zk_nd_sz = "Standard_D2"
 
 
 
