@@ -37,13 +37,13 @@ hdi_sprk_hd_nd_sz = "Standard_D4"
 
 hdi_sprk_htp_usr_pwd = "ztrdsed_vwE_53_243"
 
-hdi_sprk_htp_usr = "itdsdevwusadmin"
+hdi_sprk_htp_usr = "itdsdevwuswadmin"
 
 hdi_sprk_wk_nd_cnt = "3"
 
 hdi_sprk_ssh_pub_ky = ""
 
-hdi_sprk_ssh_user = "itdsdevwusadminssh"
+hdi_sprk_ssh_user = "itdsdevwusadmin"
 
 hdi_version = "3.6"
 

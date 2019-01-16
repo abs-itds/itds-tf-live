@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "clusters_sprk_itds_dev_wus_me_name": {
+            "value": null
+        },
+        "networkSecurityGroups_itds_dev_wus_hdi_sprk_nsg_name": {
+            "value": null
+        },
+        "userAssignedIdentities_sprk_itds_dev_wus_me_name": {
+            "value": null
+        },
+        "securityRules_port_any_inbound_name": {
+            "value": null
+        },
+        "securityRules_port_any_outbound_name": {
+            "value": null
+        }
+    }
+}

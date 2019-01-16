@@ -16,7 +16,7 @@ terragrunt = {
   # folder, and execute Terraform commands in that folder.
   terraform {
     #source = "git::git@github.com:abs-itds/itds-tf-modules.git//long-running/shared-services?ref=master"
-    source = "/Users/Shingate/Documents/Albertson/BitBucket/itds/itds-tf/itds-tf-modules/cicd-services/artifactory"
+    source = "/Users/Shingate/Documents/Albertson/BitBucket/itds/itds-tf/itds-tf-modules/long-running/cicd-services/artifactory"
   }
 
   # Include all settings from the root terraform.tfvars file
@@ -29,8 +29,62 @@ terragrunt = {
 #                          Terraform Module Variables                          #
 ################################################################################
 
-shrd_srv_artif_nd_adm = "itdsdopswusadmin"
-shrd_srv_artif_nd_pswd = "ztrdsed_vwE_53_243"
+shrd_srv_artif_vm_adm = "itdsdopswusadmin"
+
+shrd_srv_artif_vm_pswd = "ztrdsed_vwE_53_243"
+
+shrd_srv_artif_nsg_ibnd_rl = [
+  "22",
+  "8081"
+]
+
+shrd_srv_artif_nsg_ibnd_rl_src_pfx = [
+  "*",
+  "*"
+]
+
+shrd_srv_artif_nsg_ibnd_rl_dst_pfx = [
+  "*",
+  "*"
+]
+
+shrd_srv_artif_nsg_obnd_rl = [
+]
+
+shrd_srv_artif_nsg_obnd_rl_src_pfx = [
+]
+
+shrd_srv_artif_nsg_obnd_rl_dst_pfx = [
+]
+
+shrd_srv_artif_lb_fnt_prt = [
+  "22",
+  "8081"
+]
+
+shrd_srv_artif_lb_prb_prt = [
+  "22",
+  "8081"
+]
+
+shrd_srv_artif_lb_bck_prt = [
+  "22",
+  "8081"
+]
+
+shrd_srv_artif_vm_ip = [
+  "172.21.40.20"
+]
+
+shrd_srv_artif_vm = {
+  vm_size = "Standard_F2"
+  vm_img_publisher = "Canonical"
+  vm_img_offer = "UbuntuServer"
+  vm_img_sku = "18.04-LTS"
+  vm_img_ver = "latest"
+  vm_mg_dsk_ty = "Standard_LRS"
+  vm_mg_dsk_sz = 1024
+}
 
 ################################################################################
 #                                     End                                      #

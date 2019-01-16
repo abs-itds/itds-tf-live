@@ -1,0 +1,344 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "clusters_sprk_itds_dev_wus_me_name": {
+            "defaultValue": "sprk-itds-dev-wus-me",
+            "type": "String"
+        },
+        "networkSecurityGroups_itds_dev_wus_hdi_sprk_nsg_name": {
+            "defaultValue": "itds-dev-wus-hdi-sprk-nsg",
+            "type": "String"
+        },
+        "userAssignedIdentities_sprk_itds_dev_wus_me_name": {
+            "defaultValue": "sprk-itds-dev-wus-me",
+            "type": "String"
+        },
+        "securityRules_port_any_inbound_name": {
+            "defaultValue": "port_any_inbound",
+            "type": "String"
+        },
+        "securityRules_port_any_outbound_name": {
+            "defaultValue": "port_any_outbound",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "comments": "Generalized from resource: '/subscriptions/f0a049d7-bb54-4698-89a3-04b140a152c0/resourceGroups/itds-dev-wus-hdi-sprk-rg/providers/Microsoft.HDInsight/clusters/sprk-itds-dev-wus-me'.",
+            "type": "Microsoft.HDInsight/clusters",
+            "name": "[parameters('clusters_sprk_itds_dev_wus_me_name')]",
+            "apiVersion": "2018-06-01-preview",
+            "location": "West US",
+            "tags": {
+                "admins": "dadam47,ashin14",
+                "environment": "Dev",
+                "group": "ITDS"
+            },
+            "scale": null,
+            "properties": {
+                "clusterVersion": "3.6.1000.67",
+                "osType": "Linux",
+                "clusterDefinition": {
+                    "blueprint": "https://blueprints.azurehdinsight.net/spark-3.6.1000.67.1812120705.json",
+                    "kind": "SPARK",
+                    "componentVersion": {
+                        "Spark": "2.3"
+                    }
+                },
+                "computeProfile": {
+                    "roles": [
+                        {
+                            "name": "headnode",
+                            "targetInstanceCount": 2,
+                            "hardwareProfile": {
+                                "vmSize": "Standard_D12_V2"
+                            },
+                            "osProfile": {
+                                "linuxOperatingSystemProfile": {
+                                    "username": "itdsdevwusadmin"
+                                }
+                            }
+                        },
+                        {
+                            "name": "workernode",
+                            "targetInstanceCount": 5,
+                            "hardwareProfile": {
+                                "vmSize": "Standard_D12_V2"
+                            },
+                            "osProfile": {
+                                "linuxOperatingSystemProfile": {
+                                    "username": "itdsdevwusadmin"
+                                }
+                            }
+                        },
+                        {
+                            "name": "zookeepernode",
+                            "targetInstanceCount": 3,
+                            "hardwareProfile": {
+                                "vmSize": "Medium"
+                            },
+                            "osProfile": {
+                                "linuxOperatingSystemProfile": {
+                                    "username": "itdsdevwusadmin"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "tier": "standard"
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/f0a049d7-bb54-4698-89a3-04b140a152c0/resourcegroups/itds-dev-wus-hdi-sprk-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/sprk-itds-dev-wus-me'.",
+            "type": "Microsoft.ManagedIdentity/userAssignedIdentities",
+            "name": "[parameters('userAssignedIdentities_sprk_itds_dev_wus_me_name')]",
+            "apiVersion": "2018-11-30",
+            "location": "westus",
+            "tags": {
+                "admins": "dadam47,ashin14",
+                "environment": "Dev",
+                "group": "ITDS"
+            },
+            "scale": null,
+            "properties": {
+                "tenantId": "b7f604a0-00a9-4188-9248-42f3a5aac2e9",
+                "principalId": "f487fb4d-1000-4c5b-860e-4feb6b5a6bb8",
+                "clientId": "20cbbd69-e04e-44c1-85d5-67f16459da4b"
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/f0a049d7-bb54-4698-89a3-04b140a152c0/resourceGroups/itds-dev-wus-hdi-sprk-rg/providers/Microsoft.Network/networkSecurityGroups/itds-dev-wus-hdi-sprk-nsg'.",
+            "type": "Microsoft.Network/networkSecurityGroups",
+            "name": "[parameters('networkSecurityGroups_itds_dev_wus_hdi_sprk_nsg_name')]",
+            "apiVersion": "2018-10-01",
+            "location": "westus",
+            "tags": {
+                "admins": "dadam47,ashin14",
+                "environment": "Dev",
+                "group": "ITDS"
+            },
+            "scale": null,
+            "properties": {
+                "provisioningState": "Succeeded",
+                "resourceGuid": "da7d1dae-1a1f-479d-8e58-efdfed92f946",
+                "securityRules": [
+                    {
+                        "name": "port_any_inbound",
+                        "etag": "W/\"ed01e94f-48e9-4bad-9e98-44697c7144c2\"",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "protocol": "Tcp",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "*",
+                            "sourceAddressPrefix": "*",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 100,
+                            "direction": "Inbound",
+                            "sourcePortRanges": [],
+                            "destinationPortRanges": [],
+                            "sourceAddressPrefixes": [],
+                            "destinationAddressPrefixes": []
+                        }
+                    },
+                    {
+                        "name": "port_any_outbound",
+                        "etag": "W/\"ed01e94f-48e9-4bad-9e98-44697c7144c2\"",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "protocol": "Tcp",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "*",
+                            "sourceAddressPrefix": "*",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 100,
+                            "direction": "Outbound",
+                            "sourcePortRanges": [],
+                            "destinationPortRanges": [],
+                            "sourceAddressPrefixes": [],
+                            "destinationAddressPrefixes": []
+                        }
+                    }
+                ],
+                "defaultSecurityRules": [
+                    {
+                        "name": "AllowVnetInBound",
+                        "etag": "W/\"ed01e94f-48e9-4bad-9e98-44697c7144c2\"",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "description": "Allow inbound traffic from all VMs in VNET",
+                            "protocol": "*",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "*",
+                            "sourceAddressPrefix": "VirtualNetwork",
+                            "destinationAddressPrefix": "VirtualNetwork",
+                            "access": "Allow",
+                            "priority": 65000,
+                            "direction": "Inbound",
+                            "sourcePortRanges": [],
+                            "destinationPortRanges": [],
+                            "sourceAddressPrefixes": [],
+                            "destinationAddressPrefixes": []
+                        }
+                    },
+                    {
+                        "name": "AllowAzureLoadBalancerInBound",
+                        "etag": "W/\"ed01e94f-48e9-4bad-9e98-44697c7144c2\"",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "description": "Allow inbound traffic from azure load balancer",
+                            "protocol": "*",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "*",
+                            "sourceAddressPrefix": "AzureLoadBalancer",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 65001,
+                            "direction": "Inbound",
+                            "sourcePortRanges": [],
+                            "destinationPortRanges": [],
+                            "sourceAddressPrefixes": [],
+                            "destinationAddressPrefixes": []
+                        }
+                    },
+                    {
+                        "name": "DenyAllInBound",
+                        "etag": "W/\"ed01e94f-48e9-4bad-9e98-44697c7144c2\"",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "description": "Deny all inbound traffic",
+                            "protocol": "*",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "*",
+                            "sourceAddressPrefix": "*",
+                            "destinationAddressPrefix": "*",
+                            "access": "Deny",
+                            "priority": 65500,
+                            "direction": "Inbound",
+                            "sourcePortRanges": [],
+                            "destinationPortRanges": [],
+                            "sourceAddressPrefixes": [],
+                            "destinationAddressPrefixes": []
+                        }
+                    },
+                    {
+                        "name": "AllowVnetOutBound",
+                        "etag": "W/\"ed01e94f-48e9-4bad-9e98-44697c7144c2\"",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "description": "Allow outbound traffic from all VMs to all VMs in VNET",
+                            "protocol": "*",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "*",
+                            "sourceAddressPrefix": "VirtualNetwork",
+                            "destinationAddressPrefix": "VirtualNetwork",
+                            "access": "Allow",
+                            "priority": 65000,
+                            "direction": "Outbound",
+                            "sourcePortRanges": [],
+                            "destinationPortRanges": [],
+                            "sourceAddressPrefixes": [],
+                            "destinationAddressPrefixes": []
+                        }
+                    },
+                    {
+                        "name": "AllowInternetOutBound",
+                        "etag": "W/\"ed01e94f-48e9-4bad-9e98-44697c7144c2\"",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "description": "Allow outbound traffic from all VMs to Internet",
+                            "protocol": "*",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "*",
+                            "sourceAddressPrefix": "*",
+                            "destinationAddressPrefix": "Internet",
+                            "access": "Allow",
+                            "priority": 65001,
+                            "direction": "Outbound",
+                            "sourcePortRanges": [],
+                            "destinationPortRanges": [],
+                            "sourceAddressPrefixes": [],
+                            "destinationAddressPrefixes": []
+                        }
+                    },
+                    {
+                        "name": "DenyAllOutBound",
+                        "etag": "W/\"ed01e94f-48e9-4bad-9e98-44697c7144c2\"",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "description": "Deny all outbound traffic",
+                            "protocol": "*",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "*",
+                            "sourceAddressPrefix": "*",
+                            "destinationAddressPrefix": "*",
+                            "access": "Deny",
+                            "priority": 65500,
+                            "direction": "Outbound",
+                            "sourcePortRanges": [],
+                            "destinationPortRanges": [],
+                            "sourceAddressPrefixes": [],
+                            "destinationAddressPrefixes": []
+                        }
+                    }
+                ]
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/f0a049d7-bb54-4698-89a3-04b140a152c0/resourceGroups/itds-dev-wus-hdi-sprk-rg/providers/Microsoft.Network/networkSecurityGroups/itds-dev-wus-hdi-sprk-nsg/securityRules/port_any_inbound'.",
+            "type": "Microsoft.Network/networkSecurityGroups/securityRules",
+            "name": "[concat(parameters('networkSecurityGroups_itds_dev_wus_hdi_sprk_nsg_name'), '/', parameters('securityRules_port_any_inbound_name'))]",
+            "apiVersion": "2018-10-01",
+            "scale": null,
+            "properties": {
+                "provisioningState": "Succeeded",
+                "protocol": "Tcp",
+                "sourcePortRange": "*",
+                "destinationPortRange": "*",
+                "sourceAddressPrefix": "*",
+                "destinationAddressPrefix": "*",
+                "access": "Allow",
+                "priority": 100,
+                "direction": "Inbound",
+                "sourcePortRanges": [],
+                "destinationPortRanges": [],
+                "sourceAddressPrefixes": [],
+                "destinationAddressPrefixes": []
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_itds_dev_wus_hdi_sprk_nsg_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/f0a049d7-bb54-4698-89a3-04b140a152c0/resourceGroups/itds-dev-wus-hdi-sprk-rg/providers/Microsoft.Network/networkSecurityGroups/itds-dev-wus-hdi-sprk-nsg/securityRules/port_any_outbound'.",
+            "type": "Microsoft.Network/networkSecurityGroups/securityRules",
+            "name": "[concat(parameters('networkSecurityGroups_itds_dev_wus_hdi_sprk_nsg_name'), '/', parameters('securityRules_port_any_outbound_name'))]",
+            "apiVersion": "2018-10-01",
+            "scale": null,
+            "properties": {
+                "provisioningState": "Succeeded",
+                "protocol": "Tcp",
+                "sourcePortRange": "*",
+                "destinationPortRange": "*",
+                "sourceAddressPrefix": "*",
+                "destinationAddressPrefix": "*",
+                "access": "Allow",
+                "priority": 100,
+                "direction": "Outbound",
+                "sourcePortRanges": [],
+                "destinationPortRanges": [],
+                "sourceAddressPrefixes": [],
+                "destinationAddressPrefixes": []
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_itds_dev_wus_hdi_sprk_nsg_name'))]"
+            ]
+        }
+    ]
+}

@@ -38,13 +38,13 @@ hdi_kfka_hd_nd_sz = "Standard_D4"
 
 hdi_kfka_htp_usr_pwd = "ztrdsed_vwE_53_243"
 
-hdi_kfka_htp_usr = "itdsdevwusadmin"
+hdi_kfka_htp_usr = "itdsdevwuswadmin"
 
 hdi_kfka_wk_nd_cnt = "3"
 
 hdi_kfka_ssh_pub_ky = ""
 
-hdi_kfka_ssh_user = "itdsdevwusadminssh"
+hdi_kfka_ssh_user = "itdsdevwusadmin"
 
 hdi_version = "3.6"
 
